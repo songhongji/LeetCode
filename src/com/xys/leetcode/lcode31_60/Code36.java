@@ -4,7 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Code 36
+ * Code 36： Valid Sudoku 判断数度是否合法
+ * 只需要判断纵/横/九宫格中除了空的‘.’之外是否有重复即可，有重复不合法，五重复合法
  */
 public class Code36 {
 
