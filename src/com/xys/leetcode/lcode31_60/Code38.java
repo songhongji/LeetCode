@@ -21,26 +21,30 @@ public class Code38 {
 
         String result = "1";
 
+        // 迭代变化
         while (--n > 0) {
             result = change(result);
         }
         return result;
     }
 
+    // 每一次变化
     public static String change(String origin) {
 
         String result = "";
         int value = 1;
-        for (int i = 0; i < origin.length(); i++) {
-            if (i < origin.length() - 1) {
-                if (origin.charAt(i) != origin.charAt(i + 1)) {
-                    result += (value + "" + origin.charAt(i));
+        int length = origin.length();
+        for (int i = 0; i < length; i++) {
+            char ch = origin.charAt(i);
+            if (i < length - 1) {
+                if (ch != origin.charAt(i + 1)) {
+                    result += (value + "" + ch);
                     value = 1;
                 } else {
                     value++;
                 }
             } else {
-                result += (value + "" + origin.charAt(i));
+                result += (value + "" + ch);
             }
         }
 
